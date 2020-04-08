@@ -7,7 +7,7 @@ const FAQ = () => {
 	// 		this.hello = "hello";
 	// 	}
 
-	function componentDidMount() {
+	function setupAccordion() {
 		const items = [
 			...document.querySelectorAll(".accordion .accordion-anchor"),
 		];
@@ -20,7 +20,7 @@ const FAQ = () => {
 		items.forEach((item) => item.addEventListener("click", toggleAccordion));
 	}
 
-	useEffect(componentDidMount);
+	useEffect(setupAccordion);
 
 	// render() {
 	return (

@@ -9,11 +9,13 @@ import AboutPage from "../components/AboutPage";
 import Contact from "../components/Contact";
 import Login from "../components/Login";
 import FAQ from "../components/FAQ";
+import ScrollToTop from "../components/ScrollToTop";
 
 const AppRouter = () => (
 	<BrowserRouter>
 		<div>
 			<Header />
+			<ScrollToTop />
 			<Switch>
 				<Route path="/" component={homePage} exact={true} />
 				<Route path="/login" component={Login} />
