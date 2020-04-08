@@ -116,12 +116,12 @@ class ResCarousel extends React.Component {
 						</div>
 					</div>
 
-					<a className="prev" onClick={() => this.plusSlides(-1)}>
+					<p className="prev" onClick={() => this.plusSlides(-1)}>
 						&#10094;
-					</a>
-					<a className="next" onClick={() => this.plusSlides(1)}>
+					</p>
+					<p className="next" onClick={() => this.plusSlides(1)}>
 						&#10095;
-					</a>
+					</p>
 				</div>
 				<br />
 
