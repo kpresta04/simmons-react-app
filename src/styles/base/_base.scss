@@ -1,0 +1,77 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	overflow: hidden !important;
+}
+body {
+	// background-image: radial-gradient(
+	// 	circle at 0% 0%,
+	// 	#373b52,
+	// 	#252736 51%,
+	// 	#1d1e26
+	// );
+	font-family: Helvitica, Arial, sans-serif;
+	font-size: $m-size;
+}
+button {
+	cursor: pointer;
+}
+.back-button {
+	display: block;
+	margin: 10px auto;
+	background-color: $greyBlue;
+	color: white;
+	text-transform: uppercase;
+
+	border: none;
+	padding: 0.5em;
+	font-size: 1.1em;
+	border-radius: 8px;
+	a {
+		color: white;
+		text-decoration: none;
+		font-weight: bold;
+	}
+}
+body,
+html {
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	position: fixed;
+	height: 100%;
+	width: 100%;
+}
+
+button:disabled {
+	cursor: default;
+}
+
+.is-active {
+	color: darken(grey, 20%) !important;
+	text-decoration: underline !important;
+}
+// .carousel .slider-wrapper {
+//   /*CSS transitions*/
+//   transition: none;
+//   transition-property: none !important;
+//   /*CSS transforms*/
+//   transform: none !important;
+//   /*CSS animations*/
+//   animation: none !important;
+// }
+.main {
+	height: 100%;
+	width: 100%;
+	min-height: calc(100vh - 12em);
+}
+
+.bannerImage {
+	width: 100%;
+	height: auto;
+}

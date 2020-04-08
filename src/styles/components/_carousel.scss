@@ -1,0 +1,44 @@
+.carousel img {
+  opacity: 0.9;
+}
+
+.legend h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.5em;
+}
+
+li.slide.selected {
+  max-height: 600px;
+}
+
+.carousel {
+  max-width: 2400px;
+  max-height: 600px;
+  margin: 5px auto !important;
+}
+.legend {
+  opacity: 1 !important;
+  bottom: 7% !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  text-shadow: 2px 2px black;
+}
+
+.carousel .control-dots {
+  bottom: -10px !important;
+}
+
+.carousel button {
+  background-color: $greyBlue;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  padding: 0.5em;
+  font-size: 1.1em;
+  border-radius: 8px;
+}
+
+.carouselLink {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}

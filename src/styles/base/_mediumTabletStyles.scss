@@ -1,0 +1,12 @@
+@media only screen and (min-width: 768px) {
+	header img {
+		height: 6em;
+		width: 9em;
+		grid-column: 1;
+		float: right;
+	}
+	#siteLinks a,
+	#accountLinks a {
+		margin: 0 0.5em;
+	}
+}

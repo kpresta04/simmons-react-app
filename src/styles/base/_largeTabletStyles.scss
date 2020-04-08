@@ -1,0 +1,9 @@
+@media only screen and (min-width: 992px) {
+	#siteLinks a,
+	#accountLinks a {
+		margin: 0 0.6em;
+	}
+	.headerLogo {
+		grid-column: 1;
+	}
+}

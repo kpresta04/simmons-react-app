@@ -1,0 +1,12 @@
+.featured {
+	// min-height: 35vh;
+	display: flex;
+	justify-content: center;
+	h1 {
+		color: $dimGrey;
+	}
+	hr {
+		border: 2px solid $greyBlue;
+		border-radius: 1px;
+	}
+}

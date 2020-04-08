@@ -1,0 +1,28 @@
+.notFoundDiv {
+	display: block;
+	margin-top: 1em;
+	justify-content: center;
+}
+.notFoundDiv a {
+	display: flex;
+	font-size: 1.5em;
+	justify-content: center;
+	// margin: 0 auto;
+}
+
+.notFoundDiv h1 {
+	font-size: 3em;
+	display: flex;
+	word-wrap: break-word;
+
+	justify-content: center;
+	// margin: 0.67em auto;
+}
+@media only screen and (max-width: 600px) {
+	.notFoundDiv h1 {
+		font-size: 2em;
+		width: 5em;
+		justify-content: center;
+		margin: 0.67em auto;
+	}
+}

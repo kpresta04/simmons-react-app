@@ -1,0 +1,51 @@
+header {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	// margin-top: 0.5em;
+	align-items: center;
+	text-transform: uppercase;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+	height: 106px;
+	margin-bottom: 1em;
+	background-color: white;
+	font-size: 1.1em;
+}
+#siteLinks a:hover,
+#accountLinks a:hover {
+	text-decoration: underline;
+}
+#siteLinks a,
+#accountLinks a {
+	color: rgb(114, 114, 114);
+	font-weight: bold;
+	text-decoration: none;
+
+	margin: 0 1em;
+}
+.headerLogo {
+	grid-column: 3/5;
+	justify-self: center;
+	// grid-column: 3;
+}
+header img {
+	height: 5em;
+	width: 8em;
+	// float: right;
+}
+
+#siteLinks {
+	grid-column: 2 / 4;
+	margin: 0 auto;
+}
+
+#accountLinks {
+	grid-column: 4;
+}
+
+.headerParent {
+	height: 106px;
+	margin-bottom: 1em;
+}
