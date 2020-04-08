@@ -7,7 +7,9 @@ class FAQ extends React.Component {
 	}
 
 	componentDidMount() {
-		const items = [...document.querySelectorAll(".accordion a")];
+		const items = [
+			...document.querySelectorAll(".accordion .accordion-anchor"),
+		];
 
 		function toggleAccordion() {
 			this.classList.toggle("active-faq");
@@ -25,9 +27,9 @@ class FAQ extends React.Component {
 
 					<div className="accordion">
 						<div className="accordion-item">
-							<a>
+							<p className="accordion-anchor">
 								What are the delivery charges for orders from the Online Shop?
-							</a>
+							</p>
 							<div className="content">
 								<p>
 									We will ship the firearm container and box to you free of
@@ -39,7 +41,9 @@ class FAQ extends React.Component {
 							</div>
 						</div>
 						<div className="accordion-item">
-							<a>Which payment methods are accepted in the Online Shop?</a>
+							<p className="accordion-anchor">
+								Which payment methods are accepted in the Online Shop?
+							</p>
 							<div className="content">
 								<p>
 									We accept major credit cards and we can accept PayPal
@@ -48,7 +52,7 @@ class FAQ extends React.Component {
 							</div>
 						</div>
 						<div className="accordion-item">
-							<a>How long will delivery take?</a>
+							<p className="accordion-anchor">How long will delivery take?</p>
 							<div className="content">
 								<p>
 									Firearm purchases will take less than 1 week. Repairs will be
@@ -57,9 +61,9 @@ class FAQ extends React.Component {
 							</div>
 						</div>
 						<div className="accordion-item">
-							<a>
+							<p className="accordion-anchor">
 								How secure is shopping in the Online Shop? Is my data secure?
-							</a>
+							</p>
 							<div className="content">
 								<p>
 									All data is encrypted and secure. Our site is state of the art
@@ -69,7 +73,9 @@ class FAQ extends React.Component {
 							</div>
 						</div>
 						<div className="accordion-item">
-							<a>What exactly happens after ordering?</a>
+							<p className="accordion-anchor">
+								What exactly happens after ordering?
+							</p>
 							<div className="content">
 								<p>
 									Firearm purchases are immediately pulled from our warehouse
@@ -82,7 +88,9 @@ class FAQ extends React.Component {
 							</div>
 						</div>
 						<div className="accordion-item">
-							<a>Do I receive an invoice for my order?</a>
+							<p className="accordion-anchor">
+								Do I receive an invoice for my order?
+							</p>
 							<div className="content">
 								<p>
 									Yes. You will receive an online invoice at the time of

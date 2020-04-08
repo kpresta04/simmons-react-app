@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
 
 export default class BurgerMenu extends React.Component {
@@ -29,7 +29,7 @@ export default class BurgerMenu extends React.Component {
 				isOpen={this.isMenuOpen()}
 				onStateChange={(state) => this.handleStateChange(state)}
 				noOverlay
-				customBurgerIcon={<img src="./images/menu.png" />}
+				customBurgerIcon={<img alt="Navigation Menu" src="./images/menu.png" />}
 			>
 				<NavLink
 					onClick={() => this.closeMenu()}

@@ -16,7 +16,7 @@
 		margin: 0 0 1em auto;
 	}
 
-	.accordion a {
+	.accordion .accordion-anchor {
 		position: relative;
 		display: -webkit-box;
 		display: -webkit-flex;
@@ -33,10 +33,11 @@
 		font-size: 2.15rem;
 		font-weight: 400;
 		border-bottom: 1px solid #e5e5e5;
+		margin: 0;
 	}
 
-	.accordion a:hover,
-	.accordion a:hover::after {
+	.accordion .accordion-anchor:hover,
+	.accordion .accordion-anchor:hover::after {
 		cursor: pointer;
 		color: $darkBlue;
 	}
@@ -50,7 +51,7 @@
 		border-bottom: 1px solid $darkBlue;
 	}
 
-	.accordion a::after {
+	.accordion .accordion-anchor::after {
 		font-family: "Ionicons";
 		content: "\02795";
 		position: absolute;

@@ -60,7 +60,11 @@ class ResCarousel extends React.Component {
 			<div>
 				<div className="slideshow-container">
 					<div className="mySlides fade">
-						<img src="./carousel/pistols.jpg" style={{ width: "100%" }} />
+						<img
+							src="./carousel/pistols.webp"
+							alt="Pistols"
+							style={{ width: "100%" }}
+						/>
 						<div className="text">
 							<div className="captionBlock">
 								<h3>Simmons Gun Repair</h3>
@@ -75,7 +79,11 @@ class ResCarousel extends React.Component {
 					</div>
 
 					<div className="mySlides fade">
-						<img src="./carousel/gunAndShells.jpg" style={{ width: "100%" }} />
+						<img
+							src="./carousel/gunAndShells.webp"
+							alt="Shotgun"
+							style={{ width: "100%" }}
+						/>
 						<div className="text">
 							<div className="captionBlock">
 								<h3>In case you haven't heard...</h3>
@@ -90,7 +98,11 @@ class ResCarousel extends React.Component {
 					</div>
 
 					<div className="mySlides fade">
-						<img src="./carousel/rifleScope.jpg" style={{ width: "100%" }} />
+						<img
+							src="./carousel/rifleScope.webp"
+							alt="Rifle with scope"
+							style={{ width: "100%" }}
+						/>
 						<div className="text">
 							<div className="captionBlock">
 								<h3>Since 1945</h3>

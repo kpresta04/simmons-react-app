@@ -8,7 +8,7 @@ const AboutPage = () => (
 				<h1>About Us</h1>
 				<img
 					className="bannerImage"
-					src="./images/gunsCrossed.jpg"
+					src="./images/gunsCrossed.webp"
 					alt="Guns Crossed"
 				></img>
 			</div>
@@ -16,8 +16,8 @@ const AboutPage = () => (
 			<div>
 				<img
 					className="smallImage"
-					src="./images/Ernie.s-3-280x280.jpg"
-					alt="Pop Simmons"
+					src="./images/Ernie.s-3-280x280.webp"
+					alt="Ernie 'Pop' Simmons"
 				></img>
 			</div>
 

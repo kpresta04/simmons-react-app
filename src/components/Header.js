@@ -12,7 +12,7 @@ const Header = () => (
 				activeClassName="is-active"
 				exact={true}
 			>
-				<img src="./logoSmall.png"></img>
+				<img src="./logoSmall.webp" alt="Simmons Gun Repair Logo"></img>
 			</NavLink>
 			{window.screen.width >= 900 && (
 				<div style={{ display: "contents" }}>
