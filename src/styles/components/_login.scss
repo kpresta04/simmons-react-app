@@ -1,6 +1,16 @@
 .logIn {
 	max-width: 1050px;
 	margin: 0 auto;
+	.sign-in-buttons {
+		margin: 2em auto;
+		width: 300px;
+		position: relative;
+	}
+	.provider-icon {
+		position: absolute;
+		top: 15px;
+		left: 30px;
+	}
 	#contactForm {
 		position: relative;
 	}
@@ -30,36 +40,10 @@
 		line-height: 1.2em;
 	}
 
-	button {
-		display: block;
-		margin: 4em 0 1.5em 0;
-		font-weight: bold;
-
-		background-color: $greyBlue;
-		color: white;
-		text-transform: uppercase;
-
-		border: none;
-		padding: 0.5em 1em 0.5em 1em;
-		font-size: 1.1em;
-		border-radius: 8px;
-		a {
-			color: white;
-			text-decoration: none;
-			font-weight: bold;
-		}
-	}
-
 	$color: $greyBlue;
 
 	h1,
-	input::-webkit-input-placeholder,
-	button {
-		font-family: "roboto", sans-serif;
-		transition: all 0.3s ease-in-out;
-	}
-
-	h1 {
+	input::-webkit-input-placeholder h1 {
 		height: 100px;
 		width: 100%;
 		font-size: 18px;
@@ -122,22 +106,6 @@
 				visibility: visible !important;
 			}
 		}
-	}
-
-	button {
-		border: none;
-		background: $color;
-		cursor: pointer;
-		border-radius: 3px;
-		padding: 6px;
-		width: 200px;
-		color: white;
-		// margin-left: 25px;
-		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
-		// &:hover {
-		// 	transform: translateY(-3px);
-		// 	box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
-		// }
 	}
 
 	.follow {
