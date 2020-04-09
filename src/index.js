@@ -5,7 +5,6 @@ import AppRouter from "./routers/AppRouter";
 import configureStore from "./store/configureStore";
 import * as serviceWorker from "./serviceWorker";
 import "normalize.css/normalize.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./styles/styles.scss";
 
 const store = configureStore();
