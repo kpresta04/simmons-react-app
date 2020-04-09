@@ -68,7 +68,7 @@ class ResCarousel extends React.Component {
 						<div className="text">
 							<div className="captionBlock">
 								<h3>Simmons Gun Repair</h3>
-								<h1>Professional gunsmithing with over 75 years of history!</h1>
+								<h1>Professional Gunsmithing</h1>
 								<button>
 									<Link to="/shop" className="carouselLink">
 										Shop Now
