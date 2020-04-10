@@ -1,4 +1,5 @@
 import React from "react";
+import { signInWithGoogle } from "../firebase/firebase.utils";
 
 class SignIn extends React.Component {
 	constructor() {
@@ -29,6 +30,7 @@ class SignIn extends React.Component {
 					<button
 						id="googleSignInButton"
 						className="custom-button sign-in-buttons"
+						onClick={() => signInWithGoogle()}
 					>
 						<img
 							className="provider-icon"
