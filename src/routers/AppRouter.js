@@ -25,7 +25,7 @@ class AppRouter extends React.Component {
 		auth.onAuthStateChanged((user) => {
 			this.setState({ currentUser: user });
 
-			console.log(user.uid);
+			// console.log(user.uid);
 		});
 	}
 	render() {
