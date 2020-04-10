@@ -10,24 +10,44 @@ import Contact from "../components/Contact";
 import Login from "../components/Login";
 import FAQ from "../components/FAQ";
 import ScrollToTop from "../components/ScrollToTop";
+import { auth } from "../firebase/firebase.utils";
 
-const AppRouter = () => (
-	<BrowserRouter>
-		<div>
-			<Header />
-			<ScrollToTop />
-			<Switch>
-				<Route path="/" component={homePage} exact={true} />
-				<Route path="/login" component={Login} />
-				<Route path="/contact" component={Contact} />
-				<Route path="/faq" component={FAQ} />
-				<Route path="/about" component={AboutPage} />
-				<Route path="/privacy" component={Privacy} />
-				<Route component={NotFoundPage} />
-			</Switch>
-			<Footer />
-		</div>
-	</BrowserRouter>
-);
+class AppRouter extends React.Component {
+	constructor() {
+		super();
+
+		this.state = {
+			currentUser: null,
+		};
+	}
+
+	componentDidMount() {
+		auth.onAuthStateChanged((user) => {
+			this.setState({ currentUser: user });
+
+			console.log(user.uid);
+		});
+	}
+	render() {
+		return (
+			<BrowserRouter>
+				<div>
+					<Header />
+					<ScrollToTop />
+					<Switch>
+						<Route path="/" component={homePage} exact={true} />
+						<Route path="/login" component={Login} />
+						<Route path="/contact" component={Contact} />
+						<Route path="/faq" component={FAQ} />
+						<Route path="/about" component={AboutPage} />
+						<Route path="/privacy" component={Privacy} />
+						<Route component={NotFoundPage} />
+					</Switch>
+					<Footer />
+				</div>
+			</BrowserRouter>
+		);
+	}
+}
 
 export default AppRouter;

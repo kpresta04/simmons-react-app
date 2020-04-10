@@ -2,7 +2,7 @@
 	max-width: 1050px;
 	margin: 0 auto;
 	.sign-in-buttons {
-		margin: 2em auto;
+		margin: 2em 0;
 		width: 300px;
 		position: relative;
 	}
@@ -13,6 +13,18 @@
 	}
 	#contactForm {
 		position: relative;
+
+		box-sizing: border-box;
+		width: 90%;
+		max-width: 500px;
+		// margin: 100px auto 0;
+		box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+		// padding: 0 1em 40px 1em;
+		border-radius: 3px;
+
+		padding: 2rem;
+		margin: 20px auto;
+		text-align: center;
 	}
 	#rememberPW {
 		display: flex;
@@ -55,19 +67,9 @@
 		vertical-align: middle;
 	}
 
-	form {
-		box-sizing: border-box;
-		width: 90%;
-		max-width: 500px;
-		// margin: 100px auto 0;
-		box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
-		// padding: 0 1em 40px 1em;
-		border-radius: 3px;
+	// form {
 
-		padding: 2rem;
-		margin: 20px auto;
-		text-align: center;
-	}
+	// }
 
 	input {
 		margin: 2em 0;
