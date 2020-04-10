@@ -1,17 +1,33 @@
 .logIn {
 	max-width: 1050px;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	.sign-in-button-div {
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 	.sign-in-buttons {
-		margin: 2em 0;
-		width: 300px;
+		width: 150px;
+		margin-top: 1em;
 		position: relative;
+	}
+	#googleSignInButton {
+		background-color: #74a8fb;
+		&:hover {
+			color: white;
+			border: none;
+		}
 	}
 	.provider-icon {
 		position: absolute;
 		top: 15px;
-		left: 30px;
+		left: 25px;
 	}
-	#contactForm {
+	.contactForm {
 		position: relative;
 
 		box-sizing: border-box;

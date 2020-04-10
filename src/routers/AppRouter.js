@@ -10,7 +10,8 @@ import Contact from "../components/Contact";
 import Login from "../components/Login";
 import FAQ from "../components/FAQ";
 import ScrollToTop from "../components/ScrollToTop";
-import { auth } from "../firebase/firebase.utils";
+import { auth, createUserProfileDocument } from "../firebase/firebase.utils";
+import Account from "../components/Account";
 
 class AppRouter extends React.Component {
 	constructor() {
@@ -20,19 +21,34 @@ class AppRouter extends React.Component {
 			currentUser: null,
 		};
 	}
+	unsubscribeFromAuth = null;
 
 	componentDidMount() {
-		auth.onAuthStateChanged((user) => {
-			this.setState({ currentUser: user });
+		this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+			if (userAuth) {
+				const userRef = await createUserProfileDocument(userAuth);
 
-			// console.log(user.uid);
+				userRef.onSnapshot((snapShot) => {
+					this.setState({
+						currentUser: {
+							id: snapShot.id,
+							...snapShot.data(),
+						},
+					});
+				});
+			}
+			this.setState({ currentUser: userAuth });
 		});
+	}
+
+	componentWillUnmount() {
+		this.unsubscribeFromAuth();
 	}
 	render() {
 		return (
 			<BrowserRouter>
 				<div>
-					<Header />
+					<Header currentUser={this.state.currentUser} />
 					<ScrollToTop />
 					<Switch>
 						<Route path="/" component={homePage} exact={true} />
@@ -40,6 +56,7 @@ class AppRouter extends React.Component {
 						<Route path="/contact" component={Contact} />
 						<Route path="/faq" component={FAQ} />
 						<Route path="/about" component={AboutPage} />
+						<Route path="/account" component={Account} />
 						<Route path="/privacy" component={Privacy} />
 						<Route component={NotFoundPage} />
 					</Switch>

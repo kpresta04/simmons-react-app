@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
 
-const Header = () => (
+const Header = ({ currentUser }) => (
 	<div className="headerParent">
 		<header>
 			{window.screen.width < 900 && <BurgerMenu />}
@@ -35,9 +35,15 @@ const Header = () => (
 						</NavLink>
 					</div>
 					<div id="accountLinks">
-						<NavLink to="/login" activeClassName="is-active">
-							Login
-						</NavLink>
+						{currentUser ? (
+							<NavLink to="/account" activeClassName="is-active">
+								Account
+							</NavLink>
+						) : (
+							<NavLink to="/login" activeClassName="is-active">
+								Login
+							</NavLink>
+						)}
 						<NavLink to="/cart" activeClassName="is-active">
 							Cart
 						</NavLink>

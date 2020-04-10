@@ -24,17 +24,18 @@ provider.setCustomParameters({ prompt: "select_account" });
 const actionCodeSettings = {
 	// URL you want to redirect back to. The domain (www.example.com) for this
 	// URL must be whitelisted in the Firebase Console.
-	url: "https://www.simmons-react-app.web.app",
+	url: "simmons-react-app.web.app",
 	// This must be true.
 	handleCodeInApp: true,
 	iOS: {
-		bundleId: "https://www.simmons-react-app.web.app",
+		bundleId: "simmons-react-app.web.app",
 	},
 	android: {
-		packageName: "https://www.simmons-react-app.web.app",
+		packageName: "simmons-react-app.web.app",
 		installApp: true,
 		minimumVersion: "12",
 	},
+	dynamicLinkDomain: "simmons-react-app.web.app",
 };
 export const signInWithEmail = (email) =>
 	auth
@@ -48,6 +49,32 @@ export const signInWithEmail = (email) =>
 		.catch(function (error) {
 			console.log(error);
 		});
+
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+	if (!userAuth) return;
+
+	const userRef = firestore.doc(`users/${userAuth.uid}`);
+
+	const snapShot = await userRef.get();
+
+	if (!snapShot.exists) {
+		const { displayName, email } = userAuth;
+		const createdAt = new Date();
+
+		try {
+			await userRef.set({
+				displayName,
+				email,
+				createdAt,
+				...additionalData,
+			});
+		} catch (error) {
+			console.log("error creating user document", error.message);
+		}
+	}
+	return userRef;
+};
+
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export default firebase;
