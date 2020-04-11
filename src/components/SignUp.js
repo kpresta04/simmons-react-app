@@ -1,9 +1,5 @@
 import React from "react";
-import {
-	auth,
-	createUserProfileDocument,
-	signInWithGoogle,
-} from "../firebase/firebase.utils";
+import { auth, createUserProfileDocument } from "../firebase/firebase.utils";
 
 class SignUp extends React.Component {
 	constructor() {
@@ -115,23 +111,11 @@ class SignUp extends React.Component {
 				</form>
 				<p style={{ color: "red" }}>{this.state.error}</p>
 
-				<div className="sign-in-button-div">
+				<div>
 					<button
 						onClick={this.handleSubmit}
 						className="custom-button sign-in-buttons"
 					>
-						Sign Up
-					</button>
-					<button
-						id="googleSignInButton"
-						className="custom-button sign-in-buttons"
-						onClick={() => signInWithGoogle()}
-					>
-						<img
-							className="provider-icon"
-							src="./images/google.svg"
-							alt="Google"
-						></img>
 						Sign Up
 					</button>
 				</div>
