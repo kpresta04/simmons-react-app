@@ -19,15 +19,15 @@ class SignUp extends React.Component {
 
 		const { displayName, email, password, confirmPassword } = this.state;
 
+		if (!displayName || !email || !password || !confirmPassword) {
+			this.setState({ error: "All fields are required" });
+			return;
+		}
 		if (password !== confirmPassword) {
 			this.setState({ error: "Passwords don't match" });
 			return;
 		}
 
-		if (!displayName || !email || !password || !confirmPassword) {
-			this.setState({ error: "All fields are required" });
-			return;
-		}
 		try {
 			const { user } = await auth.createUserWithEmailAndPassword(
 				email,
