@@ -7,11 +7,12 @@ import Footer from "../components/Footer";
 import Privacy from "../components/Privacy";
 import AboutPage from "../components/AboutPage";
 import Contact from "../components/Contact";
-import Login from "../components/Login";
+import SignUpPage from "../components/SignUpPage";
 import FAQ from "../components/FAQ";
 import ScrollToTop from "../components/ScrollToTop";
 import { auth, createUserProfileDocument } from "../firebase/firebase.utils";
 import Account from "../components/Account";
+import SignInPage from "../components/SignInPage";
 
 class AppRouter extends React.Component {
 	constructor() {
@@ -53,7 +54,8 @@ class AppRouter extends React.Component {
 					<ScrollToTop />
 					<Switch>
 						<Route path="/" component={homePage} exact={true} />
-						<Route path="/login" component={Login} />
+						<Route path="/signup" component={SignUpPage} />
+						<Route path="/signin" component={SignInPage} />
 						<Route path="/contact" component={Contact} />
 						<Route path="/faq" component={FAQ} />
 						<Route path="/about" component={AboutPage} />

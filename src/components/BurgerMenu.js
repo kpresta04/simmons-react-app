@@ -76,12 +76,12 @@ export default class BurgerMenu extends React.Component {
 					Contact Us
 				</NavLink>
 				<NavLink
-					to="/login"
+					to="/signup"
 					onClick={() => this.closeMenu()}
 					className="menu-item"
 					activeClassName="is-active"
 				>
-					Login
+					Sign Up
 				</NavLink>
 				<NavLink
 					to="/cart"

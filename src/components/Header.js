@@ -40,8 +40,8 @@ const Header = ({ currentUser }) => (
 								Account
 							</NavLink>
 						) : (
-							<NavLink to="/login" activeClassName="is-active">
-								Login
+							<NavLink to="/signup" activeClassName="is-active">
+								Sign Up
 							</NavLink>
 						)}
 						<NavLink to="/cart" activeClassName="is-active">

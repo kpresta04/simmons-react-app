@@ -1,5 +1,10 @@
 import React from "react";
-import { auth, createUserProfileDocument } from "../firebase/firebase.utils";
+import {
+	auth,
+	createUserProfileDocument,
+	signInWithGoogle,
+} from "../firebase/firebase.utils";
+import { Link } from "react-router-dom";
 
 class SignUp extends React.Component {
 	constructor() {
@@ -58,7 +63,7 @@ class SignUp extends React.Component {
 
 		return (
 			<div className="contactForm">
-				<h3>Or Sign Up</h3>
+				<h3>Sign Up</h3>
 
 				<form
 					onKeyPress={(e) => {
@@ -118,6 +123,23 @@ class SignUp extends React.Component {
 					>
 						Sign Up
 					</button>
+					<button
+						id="googleSignInButton"
+						className="custom-button sign-in-buttons"
+						onClick={() => signInWithGoogle()}
+					>
+						<img
+							className="provider-icon"
+							src="./images/google.svg"
+							alt="Google"
+						></img>
+						Sign Up
+					</button>
+				</div>
+				<div style={{ display: "flex", justifyContent: "center" }}>
+					<h4>
+						Already have an account? <Link to={"/signin"}>Sign in</Link>{" "}
+					</h4>
 				</div>
 			</div>
 		);
